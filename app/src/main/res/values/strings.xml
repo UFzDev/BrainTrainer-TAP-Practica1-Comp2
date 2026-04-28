@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BrainTrainer-TAP-Practica1-Comp2</string>
+    <string name="title_main">BRAIN TRAINING</string>
+    <string name="select_difficulty">SELECCIONA UNA DIFICULTAD</string>
+    <string name="difficulty_easy">FÁCIL</string>
+    <string name="difficulty_medium">MEDIO</string>
+    <string name="difficulty_hard">DIFÍCIL</string>
 </resources>

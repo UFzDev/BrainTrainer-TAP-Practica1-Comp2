@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background_void">#16111b</color>
+    <color name="surface_card">#231e27</color>
+    <color name="primary_purple">#ddb7ff</color>
+    <color name="on_primary">#490080</color>
+
+    <color name="easy_green">#4ae176</color>
+    <color name="easy_green_dark">#003915</color>
+    <color name="medium_orange">#FFB74D</color>
+    <color name="medium_orange_dark">#E65100</color>
+    <color name="hard_red">#ffb4ab</color>
+    <color name="hard_red_dark">#690005</color>
+
+    <color name="text_primary">#eadfed</color>
 </resources>
