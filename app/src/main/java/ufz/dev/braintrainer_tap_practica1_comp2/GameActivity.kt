@@ -31,6 +31,14 @@ class GameActivity : AppCompatActivity() {
     private var difficulty = "EASY"
     private var gameTimer: CountDownTimer? = null
 
+    private lateinit var layoutResults: LinearLayout
+
+    private lateinit var tvFinalScore: TextView
+
+    private lateinit var btnPlayAgain: Button
+
+    private lateinit var btnGoMenu: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -59,6 +67,19 @@ class GameActivity : AppCompatActivity() {
             button.setOnClickListener {
                 checkAnswer(button.text.toString().toInt())
             }
+        }
+
+        layoutResults = findViewById(R.id.layoutResults)
+        tvFinalScore = findViewById(R.id.tvFinalScore)
+        btnPlayAgain = findViewById(R.id.btnPlayAgain)
+        btnGoMenu = findViewById(R.id.btnGoMenu)
+
+        btnPlayAgain.setOnClickListener {
+            recreate()
+        }
+
+        btnGoMenu.setOnClickListener {
+            finish()
         }
 
         startPreparationCountDown()
@@ -179,8 +200,13 @@ class GameActivity : AppCompatActivity() {
 
     private fun endGame() {
         btnOptions.forEach { it.isEnabled = false }
+        gameTimer?.cancel()
+
         HistoryManager.addRecord(score, difficulty)
-        Toast.makeText(this, "Juego terminado. Score final: $score", Toast.LENGTH_LONG).show()
+
+        layoutGameContent.visibility = View.GONE
+        layoutResults.visibility = View.VISIBLE
+        tvFinalScore.text = "Puntaje: $score"
     }
 
     override fun onDestroy() {

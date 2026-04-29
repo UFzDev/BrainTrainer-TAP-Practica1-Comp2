@@ -148,4 +148,47 @@
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
+
+    <!--Pantalla Final -->
+    <LinearLayout
+        android:id="@+id/layoutResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_void"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvFinalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_final"
+            android:textColor="@color/primary_purple"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:text="@string/restart_final"
+            android:backgroundTint="@color/easy_green"
+            android:textColor="@color/easy_green_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnGoMenu"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:text="@string/menu_final"
+            android:backgroundTint="@color/surface_card"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
 </FrameLayout>

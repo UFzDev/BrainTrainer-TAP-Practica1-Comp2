@@ -23,4 +23,9 @@
     <string name="op_format_sub">%1$d - %2$d</string>
     <string name="op_format_mul">%1$d × %2$d</string>
     <string name="op_format_div">%1$d ÷ %2$d</string>
+
+    <string name="title_final">Puntaje: </string>
+    <string name="restart_final">VOLVER A JUGAR </string>
+    <string name="menu_final">MENÚ PRINCIPAL </string>
+
 </resources>
