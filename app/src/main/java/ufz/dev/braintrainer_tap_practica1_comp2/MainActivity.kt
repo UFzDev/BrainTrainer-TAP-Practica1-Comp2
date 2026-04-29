@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_game -> {
-                    val intent = Intent(this, GameActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.nav_history -> {
