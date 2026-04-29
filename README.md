@@ -1,6 +1,6 @@
-# Brain Trainer - Juego de Agilidad Mental (BinTra) 🧠
+# Brain Trainer - Juego de Agilidad Mental 🧠
 
-BinTra es una aplicación móvil nativa para Android, desarrollada en Kotlin, diseñada para el entrenamiento cerebral mediante la resolución de operaciones matemáticas aleatorias. Este proyecto fue creado como parte de la Práctica 1 de la Competencia 2 para la asignatura de Tópicos Avanzados de Programación.
+Brain Trainer es una aplicación móvil nativa para Android, desarrollada en Kotlin, diseñada para el entrenamiento cerebral mediante la resolución de operaciones matemáticas aleatorias. Este proyecto fue creado como parte de la Práctica 1 de la Competencia 2 para la asignatura de Tópicos Avanzados de Programación.
 
 ## 🚀 Características Principales
 
