@@ -47,8 +47,8 @@ Pantalla de "Settings" para ajustar el tiempo de duración de las partidas.
 ## 🎓 Información del Proyecto
 *   **Institución**: Tecnológico Nacional de México en Celaya (ITC).
 *   **Asignatura**: Tópicos Avanzados de Programación.
-*   **Profesor**: M.A.V.D. José Jesús Sánchez Farías.
-*   **Alumno**: Uriel Flores Zarate (No. Control: 23031521).
+*   **Profesor**:José Jesús Sánchez Farías.
+*   **Alumno**: Uriel Flores Zarate
 *   **Fecha de entrega**: 28 de abril de 2026.
 
 Desarrollado con ❤️ por **UFzDev**
