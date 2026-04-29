@@ -31,14 +31,15 @@ class MainActivity : AppCompatActivity() {
         val btnMedium: Button = findViewById(R.id.btnMedium)
         val btnHard: Button = findViewById(R.id.btnHard)
 
-        val onDifficultyClick = {
+        val startGame = { difficulty: String ->
             val intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("DIFFICULTY", difficulty)
             startActivity(intent)
         }
 
-        btnEasy.setOnClickListener { onDifficultyClick() }
-        btnMedium.setOnClickListener { onDifficultyClick() }
-        btnHard.setOnClickListener { onDifficultyClick() }
+        btnEasy.setOnClickListener { startGame("EASY") }
+        btnMedium.setOnClickListener { startGame("MEDIUM") }
+        btnHard.setOnClickListener { startGame("HARD") }
 
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
@@ -46,20 +47,13 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.nav_exit -> {
-                    finishAffinity()
-                }
+                R.id.nav_exit -> finishAffinity()
                 R.id.nav_settings -> {
                     val intent = Intent(this, SettingsActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.nav_game -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                }
-                R.id.nav_history -> {
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                }
+                R.id.nav_game -> drawerLayout.closeDrawer(GravityCompat.START)
+                R.id.nav_history -> drawerLayout.closeDrawer(GravityCompat.START)
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
