@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_void"
+    android:padding="32dp"
+    android:gravity="center_horizontal"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_settings"
+        android:textColor="@color/text_primary"
+        android:textSize="32sp"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_game_time"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etGameTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_purple"
+        android:hint="@string/hint_time"
+        android:textColorHint="@color/outline"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btnSaveSettings"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/btn_save"
+        android:backgroundTint="@color/primary_purple"
+        android:textColor="@color/on_primary"
+        app:cornerRadius="16dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

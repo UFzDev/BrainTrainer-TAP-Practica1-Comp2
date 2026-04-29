@@ -10,4 +10,10 @@
     <string name="menu_history">HISTORY</string>
     <string name="menu_settings">SETTINGS</string>
     <string name="menu_exit">EXIT</string>
+
+    <string name="title_settings">AJUSTES</string>
+    <string name="label_game_time">TIEMPO DE JUEGO (SEGUNDOS)</string>
+    <string name="hint_time">Ej. 60</string>
+    <string name="btn_save">GUARDAR</string>
+    <string name="msg_saved">Ajustes guardados</string>
 </resources>

@@ -1,6 +1,8 @@
 package ufz.dev.braintrainer_tap_practica1_comp2
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -11,6 +13,11 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        var gameTimeSeconds: Int = 60
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +26,19 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
         val navView: NavigationView = findViewById(R.id.nav_view)
+
+        val btnEasy: Button = findViewById(R.id.btnEasy)
+        val btnMedium: Button = findViewById(R.id.btnMedium)
+        val btnHard: Button = findViewById(R.id.btnHard)
+
+        val onDifficultyClick = {
+            val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnEasy.setOnClickListener { onDifficultyClick() }
+        btnMedium.setOnClickListener { onDifficultyClick() }
+        btnHard.setOnClickListener { onDifficultyClick() }
 
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
@@ -29,10 +49,19 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_exit -> {
                     finishAffinity()
                 }
-                R.id.nav_game, R.id.nav_history, R.id.nav_settings -> {
+                R.id.nav_settings -> {
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_game -> {
+                    val intent = Intent(this, GameActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_history -> {
                     drawerLayout.closeDrawer(GravityCompat.START)
                 }
             }
+            drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
 
