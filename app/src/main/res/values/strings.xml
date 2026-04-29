@@ -5,4 +5,9 @@
     <string name="difficulty_easy">FÁCIL</string>
     <string name="difficulty_medium">MEDIO</string>
     <string name="difficulty_hard">DIFÍCIL</string>
+
+    <string name="menu_game">GAME</string>
+    <string name="menu_history">HISTORY</string>
+    <string name="menu_settings">SETTINGS</string>
+    <string name="menu_exit">EXIT</string>
 </resources>
