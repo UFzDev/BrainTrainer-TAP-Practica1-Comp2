@@ -53,7 +53,10 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_game -> drawerLayout.closeDrawer(GravityCompat.START)
-                R.id.nav_history -> drawerLayout.closeDrawer(GravityCompat.START)
+                R.id.nav_history -> {
+                    val intent = Intent(this, HistoryActivity::class.java)
+                    startActivity(intent)
+                }
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true

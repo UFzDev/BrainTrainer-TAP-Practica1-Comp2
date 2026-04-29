@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.util.Locale
 import kotlin.random.Random
 
 class GameActivity : AppCompatActivity() {
@@ -94,11 +95,11 @@ class GameActivity : AppCompatActivity() {
         gameTimer = object : CountDownTimer(totalMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val seconds = millisUntilFinished / 1000
-                tvTimer.text = String.format("%02d:%02d", seconds / 60, seconds % 60)
+                tvTimer.text = String.format(Locale.US, "%02d:%02d", seconds / 60, seconds % 60)
             }
 
             override fun onFinish() {
-                tvTimer.text = "00:00"
+                tvTimer.text = getString(R.string.timer_zero)
                 endGame()
             }
         }.start()
@@ -126,23 +127,23 @@ class GameActivity : AppCompatActivity() {
         when (op) {
             "+" -> {
                 correctAnswer = a + b
-                tvOperation.text = "$a + $b"
+                tvOperation.text = getString(R.string.op_format_sum, a, b)
             }
             "-" -> {
                 if (a < b) { val temp = a; a = b; b = temp }
                 correctAnswer = a - b
-                tvOperation.text = "$a - $b"
+                tvOperation.text = getString(R.string.op_format_sub, a, b)
             }
             "*" -> {
                 correctAnswer = a * b
-                tvOperation.text = "$a × $b"
+                tvOperation.text = getString(R.string.op_format_mul, a, b)
             }
             "/" -> {
                 val res = range.random()
                 b = if (b == 0) 1 else b
                 a = res * b
                 correctAnswer = res
-                tvOperation.text = "$a ÷ $b"
+                tvOperation.text = getString(R.string.op_format_div, a, b)
             }
         }
 
@@ -169,7 +170,7 @@ class GameActivity : AppCompatActivity() {
     private fun checkAnswer(selected: Int) {
         if (selected == correctAnswer) {
             score++
-            tvScore.text = "Score: $score"
+            tvScore.text = getString(R.string.score_format, score)
             generateQuestion()
         } else {
             generateQuestion()
@@ -178,6 +179,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun endGame() {
         btnOptions.forEach { it.isEnabled = false }
+        HistoryManager.addRecord(score, difficulty)
         Toast.makeText(this, "Juego terminado. Score final: $score", Toast.LENGTH_LONG).show()
     }
 

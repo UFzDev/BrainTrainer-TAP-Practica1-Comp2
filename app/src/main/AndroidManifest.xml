@@ -26,6 +26,9 @@
         <activity
             android:name=".GameActivity"
             android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
