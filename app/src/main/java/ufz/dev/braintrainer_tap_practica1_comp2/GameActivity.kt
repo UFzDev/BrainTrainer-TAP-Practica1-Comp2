@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +15,7 @@ class GameActivity : AppCompatActivity() {
 
     private lateinit var tvPreparationCount: TextView
     private lateinit var layoutPreparation: LinearLayout
-    private lateinit var layoutGameContent: LinearLayout
+    private lateinit var layoutGameContent: RelativeLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

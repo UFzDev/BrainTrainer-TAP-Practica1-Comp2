@@ -17,4 +17,5 @@
 
     <color name="text_primary">#eadfed</color>
     <color name="outline">#988d9f</color>
+    <color name="tertiary">#adc6ff</color>
 </resources>
